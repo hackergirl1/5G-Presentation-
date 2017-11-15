@@ -1,0 +1,36 @@
+#FORM{
+
+	//border:solid red 2px;
+	background-color:#7FFFD4;
+	//padding:15px;
+	font-size:150%;
+	font-style:oblique;
+
+}
+
+form{
+
+	margin:auto;
+	width: 75%;
+	//border:solid red 2px;
+	background-color:#7FFFD4;
+	padding:15px;
+}
+
+#form_style{
+
+   //border: solid black 5px;
+    margin-left:auto;
+	margin-right:auto;
+
+
+}
+
+.question{
+	border: 7px;
+    background-color:#E6E6FA;
+    font-style: oblique;
+    font-size:25px;
+    padding: 5px;
+
+}
