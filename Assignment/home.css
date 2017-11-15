@@ -1,0 +1,90 @@
+
+body {
+    background-image: url("bakground.jpg//");
+}
+#header {
+    width: 100%;
+}
+
+#sidebar {
+    float:left;
+    position: relative;
+    padding: o;
+    margin: 0;
+    width: 5%;
+}
+
+.navbar {
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+    width: 15%;
+    height: 100%;
+    background-color:darkorange;
+    position: fixed;
+    overflow: hidden;
+}
+
+.menuitem a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color:black
+}
+
+.menuitem a:hover {
+    background-color:cornflowerblue;
+    color: white;
+}
+
+#pagehead {
+    background-color: cornflowerblue;
+    padding: 30px;
+}
+
+.drpdwnitems .drpdwnword{
+    display: none;
+    background-color:cornflowerblue;
+    float: right;
+    text-align:left;
+    height:inherit;
+   
+}
+
+
+
+.drpdwnword:hover {
+    color: black;
+}
+
+.drpdwn .drpdwnitems:hover{
+    display: block;
+    color: white;
+     list-style-type:circle;
+    text-decoration: none;
+
+}
+
+#active a{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+h2,h3,p {
+    padding: 10px;
+}
+
+#maincontent {
+    float: right;
+    position:relative;
+    width: 75%;
+    margin: 0px 70px 0px 70px;
+    background-color:darkorange;
+    height: 100%;
+
+}

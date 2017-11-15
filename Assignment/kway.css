@@ -1,0 +1,91 @@
+
+body {
+    background-image: url("bakground.jpg//");
+}
+#header {
+    width: 100%;
+}
+
+#sidebar {
+    float:left;
+    position: relative;
+    padding: o;
+    margin: 0;
+    width: 5%;
+}
+
+ul {
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+    width: 15%;
+    height: 100%;
+    background-color:darkorange;
+    position: fixed;
+    overflow: hidden;
+}
+
+.menuitem a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color:black
+}
+
+.menuitem a:hover {
+    background-color:cornflowerblue;
+    color: white;
+}
+
+#pagehead {
+    background-color: cornflowerblue;
+    padding: 30px;
+}
+
+.drpdwnitems {
+    display: none;
+    background-color:cornflowerblue;
+    float: right;
+    text-align:center;
+    height:inherit;
+    list-style-type:circle;
+}
+
+.drpdwnword {
+    color:white;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.drpdwnword:hover {
+    color: black;
+}
+
+.drpdwn:hover .drpdwnitems{
+    display: block;
+    color: white;
+}
+
+#active a{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+h2,h3,p {
+    padding: 10px;
+}
+
+#maincontent {
+    float: right;
+    position:relative;
+    width: 75%;
+    margin: 0px 70px 0px 70px;
+    background-color:darkorange;
+    height: 100%;
+
+}
