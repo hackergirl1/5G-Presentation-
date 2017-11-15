@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang = "en-us">
+
+<head>
+
+<meta charset = "utf-8">
+
+  <title> </title>
+
+  <script type = "text/javascript" src = "assignment.js" > </script>
+
+   <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+ </head>
+
+ <body id = "FORM">
+
+ 	<main id = "form_style">
+
+ 		<form action =# method = "post" onsubmit = "return validate()">
+        
+         <!--question 1 -->
+ 		<div class = "question">
+
+ 		<label> 1. Which of the following is a type Mapping function ? </label> <br>
+
+ 		<input id = "a" type = "radio" name = "question1" value = "cacheMapping">
+ 		<label> Cache Mapping </label> <br>
+
+ 		<input id = "b " type = "radio" name = "question1" value = "nonAssociative">
+ 		<label> Non associative  </label> <br>
+
+ 		<input id = "associative" type = "radio" name = "question1" value = "associative">
+ 		<label> Associative </label> <br>
+
+ 		<input id =  "c" type = "radio" name = "question1" value = "xWay">
+ 		<label> x-Way set associative </label>
+
+           <hr>
+ 		</div> 
+
+ 		
+
+ 		<!--question 2 -->
+ 		<div class = "question">
+
+ 		 <label> 2. In direct mapping the memory address contains how many field(s) ? </label><br>
+
+ 		 <input id = "d" type = "radio" name = "question2" value =#>
+ 		 <label> 2 </label><br>
+
+ 		 <input id = "3" type = "radio" name ="question2" value = "3">
+ 		 <label> 3 </label> <br>
+
+ 		 <input id = "e" type = "radio" name = "question2" value = #>
+ 		 <label> 7 </label><br>
+
+ 		 <input id = "f" type = "radio" name = "question2" value =#>
+ 		 <label> 1 </label>
+ 
+            <hr>
+ 		</div>
+
+ 		<!--question 3 -->
+
+ 		<div class = "question">
+
+ 		<label> 3. In k-Way associative mapping the memory address contains how many field(s) ? </label><br>
+
+ 		<input id = "3" type ="radio" name = "question3" value = "3">
+ 		<label> 3 </label><br>
+
+ 		<input id = "g" type = "radio" name = "question3" value = "6" >
+ 		<label> 6 </label><br>
+
+ 		<input id = "h" type = "radio" name = "question3" value = "2" >
+ 		<label> 2 </label><br>
+
+ 		<input id = NA type = "radio" name = "question3" value = "NA" >
+ 		<label> None of the above </label><br> 
+
+ 		<hr>
+
+     </div>
+ 		<!--question 4 -->
+
+ 		<div class = "question">
+
+ 		<label> 4. How many field(s)does the memory address contain in associative mapping ? </label><br>
+ 		
+ 		<input id = "i" type = "radio" name =question4 value = "10">
+ 		<label> 10 </label><br>
+
+ 		<input id = "j" type = "radio" name = "question4" value = "1">
+ 		<label> 1 </label><br>
+
+ 		<input id = "k" type = "radio" name = "question4" value = "3">
+ 		<label> 3 </label><br>
+
+ 		<input id = "2" type = "radio" name = "question4" value = "2">
+ 		<label> 2 </label>
+
+            <hr>
+ 	    </div> 
+
+         
+ 		<!--question 5 -->
+
+ 		<div class = "question">
+
+ 		<label> 5. Victim Cache was used to reduce effieciency concerns in </label><br>
+
+         <input id = "l" type = "radio" name = "question5" value ="x">
+ 		<label> x-Way set associative mapping  </label><br>
+
+ 		<input id ="m" type = "radio" name ="question5" value ="k">
+ 		<label> k-Way set associative mapping </label><br>
+
+ 		<input id = "victim" type = "radio" name = "question5" value = "victim">
+ 		<label> Direct mapping </label><br>
+
+ 		<input id ="n" type = "radio" name = "question5" value = "A">
+ 		<label> Associative mapping </label>
+
+ 		<hr>
+
+ 	  </div>
+
+ 	   
+
+ 	  <div class = "question">
+      
+       <p> Assuming addressing is done at the byte level and
+       	   direct mapping is used, use the information given below to answer questions 6 - 8 
+
+       </p>
+
+ 	  <p> 
+ 	  	 Main memory: 4GB <br>
+ 	  	 Cache memory: 64MB <br>
+ 	  	  Block size: 16 B
+ 	  	</p>
+
+            <hr>
+ 	  </div>
+
+ 		<!--question 6 -->
+
+ 	 <div class = "question">
+ 		<label> 6. Tag size </label><br>
+
+ 		<input id = "o" type = "radio" name ="question6" value =#>
+ 		<label> 4 bytes  </label><br>
+
+ 		<input id = "6" type = "radio" name = "question6" value = "6">
+ 		<label> 6 bytes </label><br>
+
+ 		<input id = "q" type = "radio" name = "question6" value =#>
+ 		<label> 22 bytes </label><br>
+
+ 		<input id = "r" type = "radio" name = "question6" value = #>
+ 		<label> None of the above </label>
+
+          <hr>
+ 	  </div> 
+ 		<!--question 7 -->
+ 		<div class = "question">
+ 		<label> 7. Word size </label><br>
+
+ 		<input id = "4" type = "radio" name = "question7" value ="4">
+ 		<label> 4 bytes  </label><br>
+
+ 		<input id ="s" type = "radio" name = "question7" value = #>
+ 		<label> 22 bytes </label><br>
+
+ 		<input id = "t" type = "radio" name = "question7" value =#>
+ 		<label> 6 bytes </label><br>
+
+ 		<input id = "u" type = "radio" name = "question7" value = #>
+ 		<label> None of the above </label>
+
+          <hr>
+ 	  </div>
+
+ 		<!--question 8 -->
+
+ 		<div class = "question">
+ 		<label> 8. Line size </label><br>
+
+ 		<input id = "v" type = "radio" name = "question8" value = #>
+ 		<label> 4 bytes  </label><br>
+
+ 		<input id = "w" type = "radio" name ="question8" value = #>
+ 		<label> 6 bytes </label><br>
+
+ 		<input id ="22" type = "radio" name = "question8" value ="22">
+ 		<label> 22 bytes </label><br>
+
+ 		<input id = "x" type = "radio" name = "question8" value = #>
+ 		<label> None of the above </label>
+
+ 		<hr>
+
+ 	     </div>
+
+ 		<!--question 9 -->
+ 		<div class = "question">
+ 		<label> 9. In the formula 'm = kv', m denotes the number of lines in main memory </label><br>
+ 		<input id = "F" type = "radio" name = "question9" value = "F">
+ 		<label> False </label><br>
+
+ 		<input id = "y" type = "radio" name = "question9" value =#>
+ 		<label> True </label><br>
+ 		<hr>
+
+ 		<!--question 10 -->
+ 		<div class = "question">
+ 		<label> 10. In associative mapping a memomry block can load into any line of cache </label><br>
+ 		<input id = "z" type = "radio" name = "question10" value = "">
+ 		<label> False </label><br>
+
+ 		<input id = "True" type = "radio" name = "question10" value = "T">
+ 		<label> True </label><br>
+ 		<hr>
+
+
+ 		<!--submit button -->
+
+ 		<div>
+
+ 			<p> Click the submit button if you are finished. </p>
+
+ 		<input type = "submit" value = "submit" style = "width:150px; height:35px; font-size:25px;">
+
+ 		</div>
+
+ 		</form>
+
+
+ 	</main>
+
+
+ </body>
+
+
+
+
+
+
+
+</html>
