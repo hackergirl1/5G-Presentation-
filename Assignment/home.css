@@ -14,13 +14,13 @@ body {
     width: 5%;
 }
 
-.navbar {
+ul {
     list-style-type: none;
     margin:0px;
     padding: 0px;
     width: 15%;
     height: 100%;
-    background-color:darkorange;
+    background-color:#424071;
     position: fixed;
     overflow: hidden;
 }
@@ -31,10 +31,11 @@ body {
     text-decoration: none;
     font-size: 20px;
     color:black
+    
 }
 
 .menuitem a:hover {
-    background-color:cornflowerblue;
+    background-color:mediumpurple;
     color: white;
 }
 
@@ -43,27 +44,28 @@ body {
     padding: 30px;
 }
 
-.drpdwnitems .drpdwnword{
+.drpdwnitems {
     display: none;
     background-color:cornflowerblue;
     float: right;
-    text-align:left;
+    text-align:center;
     height:inherit;
-   
+    list-style-type:circle;
 }
 
-
+.drpdwnword {
+    color:white;
+    font-size: 17px;
+    text-decoration: none;
+}
 
 .drpdwnword:hover {
     color: black;
 }
 
-.drpdwn .drpdwnitems:hover{
+.drpdwn:hover .drpdwnitems{
     display: block;
     color: white;
-     list-style-type:circle;
-    text-decoration: none;
-
 }
 
 #active a{
