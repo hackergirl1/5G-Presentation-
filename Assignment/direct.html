@@ -26,89 +26,98 @@
 
     <div id="maincontent">
         <h1 id=pagehead> Direct Mapping</h1>
+		<h2>Definition</h2>
+         <p>
+			This is the simplest technique, it maps each block of main memory into only one possible cache line. This mapping is expressed as:<br><br>
+			 <caption align="center"><i>i = modulo m</i></caption> <br><br>
+			 where<br><br>
+			 <table>
+			 <tr>
+			 <td>i</td><td>=</td><td>cache line number</td>
+			 </tr>
+			 <tr>
+			 <td>j</td><td>=</td><td>main memory number</td>
+			 </tr>
+			 <tr>
+			 <td>m</td><td>=</td><td>number of lines in the cache</td>
+			 </tr>
+			 </table>
+		</p>
+		<h2>How it works</h2>
+		 <p>
+			<figure align="center">
+			<img src = "dmap.png" alt = ""  height = "350px" width = "578px">
+			<figcaption>Figure 1.1: Direct mapping diagram</figcaption>
+			</figure><br>
+		    Figure 1.1 above shows  the mapping of the first m blocks of main memory. Each block if main memory maps into one unique line of the cache. 
+			The next m blocks of main memory map into the cache in the same way; that is, block Bm of main memory maps into line L0 ¬of cache, block 
+			Bm+1 maps into line L1, and so on.<br><br>
+			When it comes to cache access each main memory address can be viewed as consisting of three fields. The least significant w bits identify a unique 
+			word or byte within a block of main memory. The remaining s bits specify one of the 2<sup>s</sup> blocks of main memory. The cache logic interprets these s bits 
+			as a tag of s – r bits and a line field of r bits. This latter fiend identifies one of the m = 2<sup>r</sup> lines of the cache.
+		</p>
+		<h2>Example</h2>
+		 <p>
+		   <figure align="center">
+			<img src = "example1.png" alt = ""  height = "497px" width = "524px">
+			<figcaption>Figure 1.2: Direct mapping example diagram</figcaption>
+			</figure><br>
+			In the example, m = 16K = 214 and i = j modulo 214. The mapping becomes:
+			<table>
+			 <tr>
+			 <th>Cache Line</th><th>Starting Memory Address of Block</th>
+			 </tr>
+			 <tr>
+			 <td>0</td><td>000000, 010000, ..., FF0000</td>
+			 </tr>
+			 <tr>
+			 <td>1</td><td>000004, 010004, ..., FF0004</td>
+			 </tr>
+			 <tr>
+			 <td>.</td><td>.</td>
+			 </tr>
+			 <tr>
+			 <td>.</td><td>.</td>
+			 </tr>
+			 <tr>
+			 <td>.</td><td>.</td>
+			 </tr>
+			 <tr>
+			 <td>2<sup>14</sup>-1</td><td>00FFFC, 01FFFC, ..., FFFFFC</td>
+			 </tr>
+			 </table><br>
+			 Note that no two blocks that map into the same line number have the same tag number.
+			 Thus, blocks with starting addresses 000000, 010000, …, FF0000 have tag numbers 00,
+			 01, …, FF, respectively.<br><br>
+			<figure align="center">
+			<img src = "read.png" alt = ""  height = "400px" width = "418px">
+			<figcaption>Figure 1.3: Cache read operation</figcaption>
+			</figure><br>
+			A read operation works as follows. The cache system is presented with a 24-bit address.
+			The 14-bit line number is used as an index into the cache to access a particular line. 
+			If the 8-bit tag number matches the tag number currently stored in that line, then the 2-bit 
+			word number is used to select one of the 4 bytes in that line. Otherwise, the 22-bit tag-plus-line 
+			field is used to fetch a block from main memory. The actual address that is used for the fetch is the 
+			22-bit tag-plus-line concatenated with two 0 bits, so that 4 bytes are fetched starting on a block boundary.<br><br>
+            The effect of this mapping is that blocks of main memory are assigned to lines
+            of the cache as follows:
+			<figure align="center">
+			<img src = "fig1.4.png" alt = ""  height = "103px" width = "285px">
+			<figcaption>Figure 1.4: Effect of direct mapping on blocks of main memory</figcaption>
+			</figure><br>
+			Thus, the use of a portion of the address as a line number provides a unique mapping of each block of main memory into 
+			the cache. When a block is actually read into its assigned line, it is necessary to tag the data to distinguish it from 
+			other blocks that can fit into that line. The most significant s - r bits serve this purpose. The direct mapping technique
+			is simple and inexpensive to implement. Its main disadvantage is that there is a fixed cache location for any given block. 
+			Thus, if a program happens to reference words repeatedly from two different blocks that map into the same line, then the blocks 
+			will be continually swapped in the cache, and the hit ratio will be low (a phenomenon known as thrashing).
+			
+			
 
-		<div>
-
-			<p> k-Way Set Associate mapping is a mapping technique that illustrates the strength of direct mapping and associative mapping. The cache is divided into groups called sets. The number of lines in a set is determined by the value of K which is given in the equation below. <a href = #kWay_formulas> Link </a> </p>
-
-			<p> Each block of main memory is mapped to one specific set in cache. For example, Block A <sub> x </sub> is mapped to Set A <sub> x </sub>, block A <sub> x + 1 </sub> is mapped to Set A <sub> x +1 </sub>......
-			Block A <sub> n </sub> is mapped to Set A <sub> n + 1 </sub> </p>
-            
-            <figure>
-                <center><img src="sets.png" alt="block -set mapping" height = "280px" width = "500px"></center>
-                <figcaption align="center">Fig1.</figcaption>
-            </figure>
-            
-			<p> Furthermore, a 2 <sup> x </sup> - way associative cache consist of 2 <sup> x </sup> lines in a set.<br><br>
-                Figure 2(a) illustrates a 2 <sup> 0 </sup> - way associative cache. Notice one cache line makes up a set. Figure 2(b) and Figure 2(c) illustrates a 2 <sup> 1 </sup> and 2 <sup> 3 </sup> - way associative
-                 cache respectively. Take note of the number of lines used to represent a set.
-			</p>
-            
-            <figure>
-                <center><img src = "fig2a.png" alt = " figure 2.a"   height = "280px" width = "500px" align ="center"></center>
-                <figcaption align="center"> Figure 2(a). 2 <sup> 0 </sup> Associative cache </figcaption>
-            </figure>
-             
-            
-            <figure>
-                <center><img src = "fig2b.png" alt = "figure 2.b"  height = "280px" width = "500px" align ="center"></center>
-                <figcaption align="center">Figure 2(b). 2 <sup> 1 </sup> Associative cache </figcaption>
-            </figure>
-            
-            <figure>
-                <center><img src = "fig2c.png" alt = "figure 2.c"  height = "280px" width = "500px" align ="center"></center>
-                <figcaption align="center"> Figure 2(c). 2 <sup> 3 </sup> Associative cache </figcaption>
-            </figure>
-
-			<p> In k- Way Set Associative mapping the cache control logic interprets the memory address as shown in figure 3. The most significant field stores the tag information. The is followed by the Set field which is then followed by the world field. </p>
-            
-            <figure>
-                <center><img src = "fig3.png" alt = "figure 3"  height = "280px" width = "500px" align ="center"></center>
-                <figcaption align="center">Figure 3 </figcaption>
-            </figure>
-
-            <div id = "kWay_formulas">
-                <h5> General Formula </h5>
-                <p> <b> m = kv </b> </p> 
-                <p> where: </p>
-                <ul>
-                    <li> <b> m: number of lines in cache </b></li>
-                    <li> <b> v: number of sets </b> </li>
-                    <li> <b> K: number of lines in each set </b> </li>
-                </ul>
-            </div>
-            <div>
-                <h5> Important relationships </h5>
-                <ul>
-                    <li> Size of tag (T <sub> s </sub>) = (s-d) bits </li>
-                    <li> Size of cache (m <sub> s </sub>) = k X 2 <sup> d + w </sup> words or bytes </li>
-                    <li> Number of lines in a set (v <sub> n </sub>) = k </li>
-                    <li> Number of sets(v) = 2 <sup> d </sup> </li>
-                    <li> Block/Line size = 2 <sup> w </sup> </li>
-                    <li> Number of lines in cache (m) = k X 2  <sup> d </sup> </li>
-                    <li> Number of blocks in main memory (M <sub> n </sub>) = 2 <sup> k + w </sup> / 2 <sup> w </sup> </li>
-
-                </ul>
-            </div>
-            <div>
-                <h5> NOTE </h5>
-                <p> v = 2 <sup> d </sup> & m = kv, therefore m = k X 2 <sup> d + w </sup> </p>
-                <p>  2 <sup> k + w </sup> / 2 <sup> w </sup> = 2 <sup> k </sup>, therefore M <sub> n </sub> = 2 <sup> k 
-                 </sup> </p>
-            </div>
-        </div>
-
-        
-    <div>
-
-       <p> Back to top  
-       	
-        <a href =#kWay> <img src = "arrow.png" alt = "arrow"  height = "70px" width = "150px"> </a>
-       </p>
-
-    <div>
-
-    </div>
+			
+		 </p>
+		
+	</div>
 
 
 
@@ -117,9 +126,8 @@
 
 
 
-
-
-
+</body>
+</html>
 
 
 
