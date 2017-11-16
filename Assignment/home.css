@@ -2,8 +2,13 @@
 body {
 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+<<<<<<< HEAD
     background-color: #e6faff;
 	
+=======
+	    background-color:#e6faff;
+
+>>>>>>> d9e49cc18c0f02f71b42cc299aca4b19c4dda7b3
 }
 
 header{
@@ -104,7 +109,6 @@ h2,h3,p {
     padding-top: 0px;
     margin: -20.8px 70px 0px 70px;
     height: 100%;
-    background-color:#e6faff;
 
 }
 
