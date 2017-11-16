@@ -2,8 +2,7 @@
 body {
 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	    background-color:#e6faff;
-
+    background-color: #e6faff;
 }
 footer{
 	    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
@@ -25,7 +24,7 @@ nav {
     font-size: 0px;
 }
 
-ul {
+.menu {
     list-style-type: none;
     margin:0;
     background-color: #00ccff;
@@ -132,4 +131,8 @@ th, td{
   padding: 10px;
   border-bottom: 1px solid #ddd;
   text-align:left;
+}
+
+.links {
+    font-size: 15px;
 }

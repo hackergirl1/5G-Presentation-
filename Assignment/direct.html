@@ -11,7 +11,7 @@
 		<img src="mapme.png" alt="main header"width="100%" >
         </div>
         <nav>
-        <ul>
+        <ul class="menu">
             <li class="menuitem"><a href="index.html" ><img alt="" src="home.png" height="15px" width="15px">&nbsp;Home</a></li>
             <li class="menuitem drpdwn"><div id="active"><a href="#"><img alt="" src="note.png" height="15px" width="15px">&nbsp;Types of Mapping</a></div>
                 <ul class="drpdwnitems">
@@ -23,14 +23,14 @@
         </ul>
     </nav>
     </header>
-
+    <a name="top"></a>
     <div id="maincontent">
         <br><br><br>
         <h1 id=pagehead> Direct Mapping</h1>
 		<h2>Definition</h2>
          <p>
 			This is the simplest technique, it maps each block of main memory into only one possible cache line. This mapping is expressed as:<br><br>
-			 <caption align="center"><i>i = modulo m</i></caption> <br><br>
+			<i>i = modulo m</i><br><br>
 			 where<br><br>
 			 <table>
 			 <tr>
@@ -116,18 +116,26 @@
 			<h2>Selective Victim Cache Simulator</h2>
 			<br>
 			One approach to lower the miss penalty is to remember what was discarded
-in case it is needed again. Since the discarded data has already been fetched, it can
-be used again at a small cost. Such recycling is possible using a victim cache. Victim
-cache was originally proposed as an approach to reduce the conflict misses of direct
-mapped caches without affecting its fast access time. Victim cache is a fully associative
-cache, whose size is typically 4 to 16 cache lines, residing between a direct mapped L1
-cache and the next level of memory.
-			
 
-			
+            in case it is needed again. Since the discarded data has already been fetched, it can
+            be used again at a small cost. Such recycling is possible using a victim cache. Victim
+            cache was originally proposed as an approach to reduce the conflict misses of direct
+            mapped caches without affecting its fast access time. Victim cache is a fully associative
+            cache, whose size is typically 4 to 16 cache lines, residing between a direct mapped L1
+            cache and the next level of memory.	
+            
+        </p>
+    </div>	
+        <h3>References</h3>
+        <i>Stallings, William. 2006. Computer Organization and Architecture - Designing for Performance.
+         New York: Pearson Education.</i>
 		 </p>
-		
+		<br><a href='#top' class="links">Back to Top</a>
+            <br><hr><br>
+            Next: <a href="associative.html" class="links">Associative Mapping</a><br>
+            <a href="index.html" class="links">Back to home</a>
 	</div>
+<<<<<<< HEAD
 
 <footer>
 Stallings, William. Computer organisation and architecture Designing for Performance. 9th ed. Pearson, 2012.
@@ -136,21 +144,9 @@ Stallings, William. Computer organisation and architecture Designing for Perform
 
 
 
+=======
+>>>>>>> afd8cccc45d8cbb669ecf7cdbf8cf407eb2cc0e6
 </body>
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-    
-</body>
-
-</html>
