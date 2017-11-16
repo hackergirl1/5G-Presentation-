@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-
 <html lang = "en-us">
-
 <head>
-
-<meta charset = "utf-8">
-
+  <meta charset = "utf-8">
   <title> </title>
-
   <script type = "text/javascript" src = "assignment.js" > </script>
-
-   <link rel = "stylesheet" type = "text/css" href = "style.css">
-
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <link rel = "stylesheet" type = "text/css" href = "home.css">
  </head>
 
  <body id = "FORM">
-
+    <header>
+        <div id="headimg">
+		<img src="header.jpg" alt="main header"width="100%" >
+        </div>
+        <nav>
+        <ul>
+            <li class="menuitem" id="active"><a href="index.html" ><img alt="" src="home.png" height="15px" width="15px">&nbsp;Home</a></li>
+            <li class="menuitem drpdwn"><a href="#"><img alt="" src="note.png" height="15px" width="15px">&nbsp;Types of Mapping</a>
+                <ul class="drpdwnitems">
+                    <li ><a href="direct.html" class="drpdwnword">Direct Mapping</a><br></li>
+                    <li ><a href="associative.html" class="drpdwnword">Associative Mapping</a><br></li>
+                    <li ><a href="kway.html" class="drpdwnword">K-Way Set Associative Mapping</a><br></li>
+                </ul></li>
+            <li class="menuitem"><a href="form.html"><img alt="" src="quiz.png" height="15px" width="15px">&nbsp;Quiz</a></li>
+        </ul>
+    </nav>
+    </header>
+     
+     
+    <p>Do you think you fully understand mapping? Take this test and find out! We suggest that you take this test after reading the information provided on this website.</p> 
+     
  	<main id = "form_style">
 
  		<form action =# method = "post" onsubmit = "return validate()">
@@ -231,7 +245,7 @@
 
  			<p> Click the submit button if you are finished. </p>
 
- 		<input type = "submit" value = "submit" style = "width:150px; height:35px; font-size:25px;">
+ 		<input type = "submit" value = "submit" class="submitbtn" style = "width:150px; height:35px;">
 
  		</div>
 
