@@ -111,7 +111,16 @@
 			is simple and inexpensive to implement. Its main disadvantage is that there is a fixed cache location for any given block. 
 			Thus, if a program happens to reference words repeatedly from two different blocks that map into the same line, then the blocks 
 			will be continually swapped in the cache, and the hit ratio will be low (a phenomenon known as thrashing).
-			
+			<br><br>
+			<h2>Selective Victim Cache Simulator</h2>
+			<br>
+			One approach to lower the miss penalty is to remember what was discarded
+in case it is needed again. Since the discarded data has already been fetched, it can
+be used again at a small cost. Such recycling is possible using a victim cache. Victim
+cache was originally proposed as an approach to reduce the conflict misses of direct
+mapped caches without affecting its fast access time. Victim cache is a fully associative
+cache, whose size is typically 4 to 16 cache lines, residing between a direct mapped L1
+cache and the next level of memory.
 			
 
 			
