@@ -106,14 +106,20 @@ h2,h3,p {
 }
 
 
-
-
-
-
-
-
-
-
 figcaption{
     text-decoration: underline;
+}
+
+
+#table1{
+	position:relative;
+}
+
+#table2{
+	position:relative;
+}
+th, td{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align:left;
 }

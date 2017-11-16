@@ -56,6 +56,7 @@
 	As seen earlier in Figure 2.2, there is no field in the address that indicates the number of bits required to uniquely identify the line number. The number of 
 	lines in the cache, therefore, is not determined by the address format, unline in direct and k-associative mapping.
 	<h2>Summary</h2>
+	<div id="table1">
 	<table>
 	 <tr>
 	  <td>Addess length</td><td> = </td><td>(s+w) bits</td>
@@ -75,8 +76,9 @@
 	 <tr>
 	   <td>Size of tag</td><td> = </td></td><td>s bits</td>
 	 </tr>
-	</table>
-	
+	</table><br><br>
+	</div>
+	<div id="table2">
 	<table>
 	<tr>
 	<th>Advantages</th><th>Disadvantages</th>
@@ -85,7 +87,9 @@
 	<td>Higher Hit rate</td><td>Complex circuitry</td>
 	</tr>
 	<td>Replacement algorithms<sup>*</sup></td><td>Slower access time</td>
-	</table><br><br>
+	</table>
+	</div>
+	<br><br>
 	
 	*Replacement algorithms are ways of replacing the existing blocks of data into cache when a new block is brought. 
 	They are used in fully associative and set associative mapping techniques to increase the hit ratio and achieve 
