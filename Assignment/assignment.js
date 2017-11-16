@@ -36,7 +36,7 @@ function validate()
 
 	alert("Thank you for taking this quiz. Your score is " + correct +"/" + total);
 	
-	  var a = confirm("Would you like to see the correct answers ?");
+	  var a = confirm("Click OK if you would you like to see the correct answers.");
 	  
 	  if(a)
 	  {
