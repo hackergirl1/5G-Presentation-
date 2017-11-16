@@ -4,7 +4,11 @@ body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     background-color: #e6faff;
 }
+footer{
+	    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 10px;
 
+}
 header{
     padding-bottom: 0px;
 	}
