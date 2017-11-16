@@ -107,6 +107,27 @@ h2,h3,p {
 
 }
 
+<<<<<<< HEAD
 figcaption{
     text-decoration: underline;
 }
+=======
+
+figcaption{
+    text-decoration: underline;
+}
+
+
+#table1{
+	position:relative;
+}
+
+#table2{
+	position:relative;
+}
+th, td{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align:left;
+}
+>>>>>>> bfbf8ef3f3697e47980852c76162e882c24ae859
