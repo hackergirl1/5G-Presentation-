@@ -1,57 +1,68 @@
 
 body {
-    background-image: url("bakground.jpg//");
-}
-#header {
-    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
-#sidebar {
-    float:left;
-    position: relative;
-    padding: o;
-    margin: 0;
-    width: 5%;
+header{
+    margin: 0px 90px 0px 90px;
+    padding-bottom: 100px;
+}
+
+#headimg{
+    font-size: 0px;
+}
+
+nav {
+    
 }
 
 ul {
     list-style-type: none;
-    margin:0px;
-    padding: 0px;
-    width: 15%;
-    height: 100%;
-    background-color:#424071;
-    position: fixed;
+    margin:0;
+
+    background-color:cornflowerblue;
     overflow: hidden;
+    
+}
+
+a {
+    font-size: 10px;
+}
+
+.menuitem {
+    float:left;
+    padding-right: 10px;
+    padding-left: 10px;
+
 }
 
 .menuitem a {
-    display: block;
+    display: inline-block;
     padding: 8px;
     text-decoration: none;
     font-size: 20px;
-    color:black
+    color:black;
     
 }
 
 .menuitem a:hover {
-    background-color:mediumpurple;
+    background-color:#424071;
     color: white;
 }
 
-#pagehead {
-    background-color: cornflowerblue;
-    padding: 30px;
-}
 
-.drpdwnitems {
+.drpdwnitems{ 
     display: none;
+    position:absolute;
     background-color:cornflowerblue;
-    float: right;
+    float: left;
     text-align:center;
     height:inherit;
     list-style-type:circle;
 }
+
 
 .drpdwnword {
     color:white;
@@ -63,13 +74,14 @@ ul {
     color: black;
 }
 
+
 .drpdwn:hover .drpdwnitems{
     display: block;
     color: white;
 }
 
 #active a{
-    background-color: cornflowerblue;
+    background-color:#424071 ;
     color: white;
 }
 
@@ -82,11 +94,24 @@ h2,h3,p {
 }
 
 #maincontent {
-    float: right;
     position:relative;
-    width: 75%;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 0px;
     margin: 0px 70px 0px 70px;
-    background-color:darkorange;
     height: 100%;
 
+}
+
+
+
+
+
+
+
+
+
+
+figcaption{
+    text-decoration: underline;
 }
