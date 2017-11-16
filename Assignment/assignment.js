@@ -1,6 +1,3 @@
-
-//function used to validate data 
-
 function validate()
 {
 	//declare variables 
@@ -14,7 +11,7 @@ function validate()
 
 	question[0] = document.getElementById("associative").checked;
 	question[1] = document.getElementById("3").checked;
-	question[2] = document.getElementById("3").checked;
+	question[2] = document.getElementById("30").checked;
 	question[3] = document.getElementById("2").checked;
 	question[4] = document.getElementById("victim").checked;
 	question[5] = document.getElementById("6").checked;
@@ -39,6 +36,11 @@ function validate()
 
 	alert("Thank you for taking this quiz. Your score is " + correct +"/" + total);
 	
+	  var a = confirm("Would you like to see the correct answers ?");
+	  
+	  if(a)
+	  {
+	
 		alert(" Question 1    -     Associative \n Question 2    -     3 \n Question 3    -     3 \n Question 4    -     2 \n Question 5    -     Victim \n Question 6    -     6 \n Question 7    -     4 \n Question 8    -     22 \n Question 9    -     False \n Question 10  -     True");
-
+	  }
 }
