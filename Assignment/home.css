@@ -6,9 +6,7 @@ body {
 }
 
 header{
-    
-
-
+    padding-bottom: 0px;
 	}
 
 #headimg{
@@ -25,7 +23,6 @@ nav {
 ul {
     list-style-type: none;
     margin:0;
-
     background-color: #00ccff;
     overflow: hidden;
     
@@ -62,7 +59,7 @@ a {
     position:absolute;
     background-color:#00ccff;
     float: left;
-    text-align:center;
+    text-align:left;
     height:inherit;
     list-style-type:circle;
 }
@@ -85,6 +82,7 @@ a {
     color: white;
 }
 
+
 #active a{
     background-color:#008fb3 ;
     color: white;
@@ -103,20 +101,11 @@ h2,h3,p {
     padding-right: 40px;
     padding-left: 40px;
     padding-top: 0px;
-    margin: 0px 70px 0px 70px;
+    margin: -21px 70px 0px 70px;
     height: 100%;
     background-color:#e6faff;
 
 }
-
-
-
-
-
-
-
-
-
 
 figcaption{
     text-decoration: underline;
