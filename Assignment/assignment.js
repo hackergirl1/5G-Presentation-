@@ -38,4 +38,7 @@ function validate()
 	//display total to the user 
 
 	alert("Thank you for taking this quiz. Your score is " + correct +"/" + total);
+	
+		alert(" Question 1    -     Associative \n Question 2    -     3 \n Question 3    -     3 \n Question 4    -     2 \n Question 5    -     Victim \n Question 6    -     6 \n Question 7    -     4 \n Question 8    -     22 \n Question 9    -     False \n Question 10  -     True");
+
 }
