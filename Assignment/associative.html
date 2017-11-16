@@ -15,8 +15,8 @@
                 <li class="menuitem"><a href="#"><img alt="" src="note.png" height="15px" width="15px">&nbsp;Types of Mapping</a></li>
           
                 <ul class="drpdwnitems">
-                <li ><a href="#" class="drpdwnword">Direct Mapping</a><br></li>
-                <li ><a href="#" class="drpdwnword">Associative Mapping</a><br></li>
+                <li ><a href="direct.html" class="drpdwnword">Direct Mapping</a><br></li>
+                <li ><a href="associative.html" class="drpdwnword">Associative Mapping</a><br></li>
                 <li ><a href="kway.html" class="drpdwnword">K-Way Set Associative Mapping</a><br></li>
                 </ul></div>
             <li class="menuitem"><a href="#"><img alt="" src="quiz.png" height="15px" width="15px">&nbsp;Quizes</a></li>
@@ -24,7 +24,77 @@
     </div>
 
     <div id="maincontent">
-    <h1 id=pagehead>Home</h1>
-    <h2>Name</h2>
-    Content
+    <h1 id=pagehead>Associative Mapping</h1>
+    <h2>Definition</h2>
+    <p>
+	In Associative Mapping, a main memory address can load into any line of cache. This offers a major advantage over direct mapping which,
+	as we learnt in the previous section, can map one block of main memory into only one one possible cache line. Because of this, the hit ratio in 
+	associative mapping is generally higher than the hit ratio in direct mapping. This results in improved cache utilization, but at the expense of speed.
+	For a graphical representation of how a block in main memory can be mapped to any line in cache, see figure 2.1 below:
+	<figure align="center">
+	<img src = "mapping.png" alt = ""  height = "251px" width = "541px">
+	<figcaption>Figure 2.1: Fully Associative Mapping diagram</figcaption>
+	</figure>
+	
+	<h2>How it works</h2>
+	In associative mapping, the cache control logic interprets the memory address in two parts: The Tag and the Word. The tag field uniquely identifies
+	a block of main memory. This is illustrated in figure 2.2 below:
+	<br>
+	<figure align="center">
+	<img src = "address.png" alt = ""  height = "131px" width = "371px">
+	<figcaption>Figure 2.2: Address structure in Associative Mapping</figcaption>
+	</figure>
+	 Full associativity means that the addresses are not interpreted as an index, but only as a tag. Therefore, 
+     To check for a block in cache, the cache control logic examines <strong>every</strong> line's tag for a match.	As seen on figure 2.2, shows how the block in 
+	 main memory address is divided into tag and word. Then, the tag (s bits) is compared to each line in cache and, if a match is found, this is interpreted as a 
+    'hit', which means the data has been mapped successfully. However, if no matches are found in cache, this results in a 'miss' and hence mapping will fail. 	 
+	<figure align="center">
+	<img src = "Amap.png" alt = ""  height = "407px" width = "674px">
+	<figcaption>Figure 2.3: Cache Organisation in detail</figcaption>
+	</figure>
+	As seen earlier in Figure 2.2, there is no field in the address that indicates the number of bits required to uniquely identify the line number. The number of 
+	lines in the cache, therefore, is not determined by the address format, unline in direct and k-associative mapping.
+	<h2>Summary</h2>
+	<table>
+	 <tr>
+	  <td>Addess length</td><td> = </td><td>(s+w) bits</td>
+	 </tr>
+	 <tr>
+	  <td>Number of addressable units</td><td> = </td><td>2<sup>2+w</sup></td>
+	 </tr>
+	 <tr>
+	  <td>Block size=line size</td><td> = </td></td><td>2w words or bytes</td>
+	 </tr>
+	 <tr>
+	  <td>Number of blocks in main memory</td><td> = </td></td><td> 2<sup>s+w</sup>/2<sup>w</sup> = 2<sup>s</sup></td>
+	 </tr>
+	 <tr>
+	   <td>Number of lines in cache</td><td> = </td></td><td>undetermined</td>
+	 </tr>
+	 <tr>
+	   <td>Size of tag</td><td> = </td></td><td>s bits</td>
+	 </tr>
+	</table>
+	
+	<table>
+	<tr>
+	<th>Advantages</th><th>Disadvantages</th>
+	</tr>
+	<tr>
+	<td>Higher Hit rate</td><td>Complex circuitry</td>
+	</tr>
+	<td>Replacement algorithms<sup>*</sup></td><td>Slower access time</td>
+	</table><br><br>
+	
+	*Replacement algorithms are ways of replacing the existing blocks of data into cache when a new block is brought. 
+	They are used in fully associative and set associative mapping techniques to increase the hit ratio and achieve 
+	higher speeds. The four main replacement algorithms are:<br>
+	<ul>
+	 <li>Least Recently Used (LRU)</li><br>
+	 <li>First-in-First-Out(FIFO)</li><br>
+	 <li>Lasti Frequently Used (LFU)</li><br>
+	 <li>Random</li>
+	</ul>
+	</p>
+	
     </div>
