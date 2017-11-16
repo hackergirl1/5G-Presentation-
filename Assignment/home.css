@@ -20,7 +20,7 @@ nav {
     font-size: 0px;
 }
 
-ul {
+.menu {
     list-style-type: none;
     margin:0;
     background-color: #00ccff;
