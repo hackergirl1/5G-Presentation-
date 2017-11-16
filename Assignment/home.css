@@ -101,17 +101,16 @@ h2,h3,p {
     padding-right: 40px;
     padding-left: 40px;
     padding-top: 0px;
-    margin: -21px 70px 0px 70px;
+    margin: -20.8px 70px 0px 70px;
     height: 100%;
     background-color:#e6faff;
 
 }
 
-<<<<<<< HEAD
+
 figcaption{
     text-decoration: underline;
 }
-=======
 
 figcaption{
     text-decoration: underline;
@@ -130,4 +129,3 @@ th, td{
   border-bottom: 1px solid #ddd;
   text-align:left;
 }
->>>>>>> bfbf8ef3f3697e47980852c76162e882c24ae859
